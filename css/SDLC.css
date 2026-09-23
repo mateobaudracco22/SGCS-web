@@ -10,26 +10,34 @@ body {
   color: #1b2a41;
 }
 
+/* ===== NAVBAR ===== */
 .navbar {
   background-color: #0c2135;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 40px;
+  padding: 12px 40px;
 }
 
 .logo {
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 38px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .logo span {
-  display: block;
-  font-size: 8px;
-  font-weight: normal;
-  letter-spacing: 2px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -202,6 +210,7 @@ body {
   display: block;
 }
 
+/* Colores alternados navy / teal */
 .dark .step-number { background-color: #0c2135; }
 .dark .icon-circle { background-color: #0c2135; color: #ffffff; }
 
