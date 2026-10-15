@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UES - Encuesta metodológica</title>
+  <link rel="stylesheet" href="../css/met_conveniente.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <div class="encabezado">
+    <div class="encabezado-interior">
+      <div class="logo">
+        <div class="logo-ues">UES</div>
+        <div class="logo-texto">ULTRA ENERGY SCRUM</div>
+      </div>
+      <button class="hamburguesa" onclick="abrirMenu()">&#9776;</button>
+    </div>
+  </div>
+
+  <!-- MENÚ HAMBURGUESA -->
+  <div class="fondo-oscuro" id="fondo" onclick="cerrarMenu()"></div>
+
+  <div class="menu-lateral" id="menu">
+    <button class="cerrar" onclick="cerrarMenu()">&times;</button>
+    <ul>
+      <li><a href="../Html/Inicio.html">Inicio</a></li>
+      <li><a href="../Html/SDLC.html">SDLC</a></li>
+      <li><a href="#">Procesos de Desarrollo</a></li>
+      <li>
+        <a href="../Html/Metodologias.html" onclick="abrirSubmenu(); return false;">Metodologías ágiles &#9662;</a>
+        <ul class="submenu" id="submenu">
+          <li><a href="../Html/met_Conveniente.html">Metodología conveniente</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Recursos y aprendizaje</a></li>
+      <li><a href="../Html/nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="../Html/Formulario.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- PORTADA -->
+  <div class="portada">
+    <div class="circulo"></div>
+    <div class="contenedor">
+      <p class="etiqueta">US-19 · ENCUESTA METODOLÓGICA</p>
+      <h1>¿Qué metodología te conviene?</h1>
+      <p class="descripcion">Responde cinco preguntas sobre tu proyecto y recibe una sugerencia con su porcentaje de coincidencia.</p>
+    </div>
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="contenedor columnas">
+
+    <!-- Tarjeta de la encuesta -->
+    <div class="tarjeta-grande izquierda">
+
+      <div class="pasos">
+        <div class="paso" id="paso1"><div class="bolita"></div>Proyecto</div>
+        <div class="paso" id="paso2"><div class="bolita"></div>Equipo</div>
+        <div class="paso" id="paso3"><div class="bolita"></div>Cambios</div>
+        <div class="paso" id="paso4"><div class="bolita"></div>Entregas</div>
+        <div class="paso" id="paso5"><div class="bolita"></div>Resultado</div>
+      </div>
+
+      <div class="texto-progreso">
+        <span id="textoPaso">Paso 3 de 5</span>
+        <span id="textoPorcentaje">60 % completado</span>
+      </div>
+      <div class="barra-fondo"><div class="barra-relleno" id="barra"></div></div>
+
+      <h3 id="pregunta"></h3>
+      <div id="opciones"></div>
+
+      <div class="botones">
+        <button class="boton-claro" id="btnAnterior" onclick="anterior()">Anterior</button>
+        <button class="boton-azul" id="btnSiguiente" onclick="siguiente()">Siguiente</button>
+      </div>
+    </div>
+
+    <!-- Tarjeta del resultado -->
+    <div class="tarjeta-grande derecha">
+      <p class="mini-titulo">RESULTADO</p>
+      <h3 id="tituloResultado">Tu mejor coincidencia es Scrum</h3>
+
+      <div class="resultado-medio">
+        <div class="dona" id="dona">
+          <div class="dona-centro">
+            <b id="donaPorcentaje">62%</b>
+            <small id="donaNombre">Scrum</small>
+          </div>
+        </div>
+
+        <div class="barras">
+          <div class="fila-barra">
+            <span class="nombre-barra">Scrum</span>
+            <div class="pista"><div class="relleno c-scrum" id="barraScrum"></div></div>
+            <span class="valor" id="valorScrum">62%</span>
+          </div>
+          <div class="fila-barra">
+            <span class="nombre-barra">Kanban</span>
+            <div class="pista"><div class="relleno c-kanban" id="barraKanban"></div></div>
+            <span class="valor" id="valorKanban">28%</span>
+          </div>
+          <div class="fila-barra">
+            <span class="nombre-barra">Cascada</span>
+            <div class="pista"><div class="relleno c-cascada" id="barraCascada"></div></div>
+            <span class="valor" id="valorCascada">10%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mensaje" id="mensaje"></div>
+
+      <div class="botones-resultado">
+        <button class="boton-claro" onclick="repetir()">Repetir encuesta</button>
+        <a href="index.html" class="boton-azul">Ver comparador</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../js/met_conveniente.js"></script>
+</body>
+</html>

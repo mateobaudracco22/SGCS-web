@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UES - Comparador de metodologías</title>
+  <link rel="stylesheet" href="../css/metodologias.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <div class="encabezado">
+    <div class="encabezado-interior">
+      <div class="logo">
+        <div class="logo-ues">UES</div>
+        <div class="logo-texto">ULTRA ENERGY SCRUM</div>
+      </div>
+      <button class="hamburguesa" onclick="abrirMenu()">&#9776;</button>
+    </div>
+  </div>
+
+  <!-- MENÚ HAMBURGUESA -->
+  <div class="fondo-oscuro" id="fondo" onclick="cerrarMenu()"></div>
+
+  <div class="menu-lateral" id="menu">
+    <button class="cerrar" onclick="cerrarMenu()">&times;</button>
+    <ul>
+      <li><a href="../Html/Inicio.html">Inicio</a></li>
+      <li><a href="../Html/SDLC.html">SDLC</a></li>
+      <li><a href="#">Procesos de Desarrollo</a></li>
+      <li>
+        <a href="../Html/Metodologias.html" onclick="abrirSubmenu(); return false;">Metodologías ágiles &#9662;</a>
+        <ul class="submenu" id="submenu">
+          <li><a href="../Html/met_Conveniente.html">Metodología conveniente</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Recursos y aprendizaje</a></li>
+      <li><a href="../Html/nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="../Html/Formulario.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- PORTADA -->
+  <div class="portada">
+    <div class="circulo"></div>
+    <div class="contenedor">
+      <p class="etiqueta">US-18 · COMPARADOR INTERACTIVO</p>
+      <h1>Compara metodologías lado a lado</h1>
+      <p class="descripcion">Marca dos o más metodologías y descubre en qué se diferencian en enfoque, roles y manejo del cambio.</p>
+    </div>
+  </div>
+
+  <div class="contenedor">
+
+    <h2>1. Elige las metodologías</h2>
+
+    <div class="tarjetas">
+      <label class="tarjeta marcada" id="card-scrum">
+        <input type="checkbox" id="chk-scrum" checked onclick="mostrar()">
+        <span><b>Scrum</b><br><small>Sprints y roles definidos</small></span>
+      </label>
+
+      <label class="tarjeta marcada" id="card-kanban">
+        <input type="checkbox" id="chk-kanban" checked onclick="mostrar()">
+        <span><b>Kanban</b><br><small>Flujo continuo visual</small></span>
+      </label>
+
+      <label class="tarjeta marcada" id="card-cascada">
+        <input type="checkbox" id="chk-cascada" checked onclick="mostrar()">
+        <span><b>Cascada</b><br><small>Fases secuenciales</small></span>
+      </label>
+
+      <label class="tarjeta" id="card-xp">
+        <input type="checkbox" id="chk-xp" onclick="mostrar()">
+        <span><b>XP</b><br><small>Prácticas técnicas ágiles</small></span>
+      </label>
+    </div>
+
+    <div class="titulo-tabla">
+      <h2>2. Tabla comparativa</h2>
+      <span class="contador" id="contador">Comparando 3 metodologías</span>
+    </div>
+
+    <p class="aviso" id="aviso">Selecciona al menos 2 metodologías para comparar.</p>
+
+    <div class="caja-tabla">
+      <table>
+        <tr>
+          <th class="esquina">CARACTERÍSTICA</th>
+          <th class="col-scrum borde-scrum"><span class="nombre">Scrum</span><span class="sub">Iterativo e incremental</span></th>
+          <th class="col-kanban borde-kanban"><span class="nombre">Kanban</span><span class="sub">Flujo continuo</span></th>
+          <th class="col-cascada borde-cascada"><span class="nombre">Cascada</span><span class="sub">Secuencial por fases</span></th>
+          <th class="col-xp borde-xp"><span class="nombre">XP</span><span class="sub">Ciclos cortos y calidad técnica</span></th>
+        </tr>
+
+        <tr>
+          <td class="lateral">Entregas</td>
+          <td class="col-scrum">Sprints de 1 a 4 semanas</td>
+          <td class="col-kanban">Continuas, sin iteraciones</td>
+          <td class="col-cascada">Una sola entrega final</td>
+          <td class="col-xp">Versiones pequeñas cada 1 o 2 semanas</td>
+        </tr>
+
+        <tr>
+          <td class="lateral">Roles</td>
+          <td class="col-scrum">Product Owner, Scrum Master, equipo</td>
+          <td class="col-kanban">Sin roles obligatorios</td>
+          <td class="col-cascada">Jefe de proyecto y analistas</td>
+          <td class="col-xp">Cliente, programadores y coach</td>
+        </tr>
+
+        <tr>
+          <td class="lateral">Cambios</td>
+          <td class="col-scrum"><span class="verde">Bienvenidos</span> entre sprints</td>
+          <td class="col-kanban"><span class="verde">Bienvenidos</span> en cualquier momento</td>
+          <td class="col-cascada"><span class="rojo">Costosos</span> y difíciles</td>
+          <td class="col-xp"><span class="verde">Bienvenidos</span> en todo momento</td>
+        </tr>
+
+        <tr>
+          <td class="lateral">Planificación</td>
+          <td class="col-scrum"><span class="amarillo">Por sprint</span></td>
+          <td class="col-kanban"><span class="amarillo">Bajo demanda</span></td>
+          <td class="col-cascada"><span class="verde">Completa al inicio</span></td>
+          <td class="col-xp"><span class="amarillo">Por iteración</span></td>
+        </tr>
+
+        <tr>
+          <td class="lateral">Ideal para</td>
+          <td class="col-scrum">Productos con requisitos cambiantes</td>
+          <td class="col-kanban">Soporte y mantenimiento</td>
+          <td class="col-cascada">Requisitos estables y cerrados</td>
+          <td class="col-xp">Equipos pequeños con alta calidad técnica</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="../js/metodologias.js"></script>
+</body>
+</html>
