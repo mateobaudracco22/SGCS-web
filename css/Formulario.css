@@ -89,6 +89,39 @@ body {
     cursor: pointer;
 }
 
+.submenu {
+  display: none;
+}
+
+.submenu li a {
+  padding-left: 22px;
+  color: #9ddcec;
+  font-size: 14px;
+}
+
+.fila-menu {
+  display: flex;
+  border-bottom: 1px solid #1d4560;
+}
+
+.menu-lateral .fila-menu a {
+  flex: 1;
+  border-bottom: none;
+}
+
+.flecha {
+  background: none;
+  border: none;
+  border-left: 1px solid #1d4560;
+  color: white;
+  font-size: 18px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.flecha:hover {
+  color: #7fd3e8;
+}
 
 /* CONTACTO */
 

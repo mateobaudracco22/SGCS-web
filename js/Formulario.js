@@ -10,6 +10,14 @@ cerrar.addEventListener("click", function() {
     menu.classList.remove("activo");
 });
 
+function abrirSubmenu() {
+  var submenu = document.getElementById("submenu");
+  if (submenu.style.display == "block") {
+    submenu.style.display = "none";
+  } else {
+    submenu.style.display = "block";
+  }
+}
 
 const formulario = document.querySelector(".formulario");
 const enviarBtn = document.querySelector("#enviarBtn");

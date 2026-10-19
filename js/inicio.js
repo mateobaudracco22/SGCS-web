@@ -18,7 +18,14 @@ boton.addEventListener("click", function() {
     }
 
 });
-
+function abrirSubmenu() {
+  var submenu = document.getElementById("submenu");
+  if (submenu.style.display == "block") {
+    submenu.style.display = "none";
+  } else {
+    submenu.style.display = "block";
+  }
+}
 document.addEventListener("DOMContentLoaded", function() {
 
     lucide.createIcons();
