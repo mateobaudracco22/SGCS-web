@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnicas de Aseguramiento de la Calidad</title>
+    <link rel="stylesheet" href="../css/aseguramiento_de_calidad.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <a href="../Html/Inicio.html" class="logo">
+            <img src="../imagenes/LOGOUES2.png" alt="UES Ultra Energy Scrum">
+        </a>
+
+        <nav class="menu">
+
+            <button class="menu-boton" id="menuBoton">☰</button>
+
+            <div class="menu-opciones" id="menuOpciones">
+
+                <a href="../Html/Inicio.html">Inicio</a>
+
+                <a href="../Html/SDLC.html">SDLC</a>
+
+                <a href="#procesos">Procesos de Desarrollo</a>
+
+                <li class="elemento-submenu">
+
+                    <div class="fila-menu">
+
+                        <a href="../Html/Metodologias.html">Metodologías ágiles</a>
+
+                        <button class="flecha" id="flechaSubmenu">&#9662;</button>
+
+                    </div>
+
+                    <ul class="submenu" id="submenu">
+
+                        <li>
+                            <a href="../Html/met_Conveniente.html">
+                                Metodología conveniente
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <a href="#recursos">Recursos y Aprendizaje</a>
+
+                <a href="../Html/nosotros.html">Sobre Nosotros</a>
+
+                <a href="../Html/Formulario.html">Contacto</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <section class="portada">
+
+        <div class="portada-texto">
+
+            <span class="etiqueta">
+                US-03 · TÉCNICAS DE ASEGURAMIENTO DE LA CALIDAD
+            </span>
+
+            <h1>Técnicas de Aseguramiento de la Calidad</h1>
+
+            <p>
+                Conocé los niveles y tipos de pruebas para garantizar
+                la calidad del software.
+            </p>
+
+        </div>
+
+        <div class="circulo"></div>
+
+    </section>
+    <main>
+
+        <section class="seccion" id="procesos">
+
+            <h2>Niveles de pruebas</h2>
+
+            <div class="linea"></div>
+
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+
+                    <div class="cabecera-tarjeta">
+
+                        <div class="icono">&lt;/&gt;</div>
+
+                        <h3>Pruebas Unitarias</h3>
+
+                    </div>
+
+                    <p>
+                        Verifican el correcto funcionamiento de componentes
+                        o unidades individuales del código.
+                    </p>
+
+                    <button class="ver-detalles" data-detalle="detalle1">
+                        Ver detalles →
+                    </button>
+
+                    <p class="detalle" id="detalle1">
+                        Se realizan para comprobar que cada parte del
+                        programa funcione correctamente por separado.
+                    </p>
+
+                </article>
+
+
+                <article class="tarjeta">
+
+                    <div class="cabecera-tarjeta">
+
+                        <div class="icono">🔗</div>
+
+                        <h3>Pruebas de Integración</h3>
+
+                    </div>
+
+                    <p>
+                        Validan la interacción entre diferentes módulos
+                        o componentes del sistema.
+                    </p>
+
+                    <button class="ver-detalles" data-detalle="detalle2">
+                        Ver detalles →
+                    </button>
+
+                    <p class="detalle" id="detalle2">
+                        Comprueban que los módulos puedan comunicarse
+                        correctamente y trabajar juntos.
+                    </p>
+
+                </article>
+
+
+                <article class="tarjeta">
+
+                    <div class="cabecera-tarjeta">
+
+                        <div class="icono">▣</div>
+
+                        <h3>Pruebas de Sistema</h3>
+
+                    </div>
+
+                    <p>
+                        Evalúan el funcionamiento completo del sistema
+                        desde la perspectiva del usuario final.
+                    </p>
+
+                    <button class="ver-detalles" data-detalle="detalle3">
+                        Ver detalles →
+                    </button>
+
+                    <p class="detalle" id="detalle3">
+                        Se prueba el programa completo para verificar
+                        que cumpla con los requisitos establecidos.
+                    </p>
+
+                </article>
+
+
+                <article class="tarjeta tarjeta-grande">
+
+                    <div class="cabecera-tarjeta">
+
+                        <div class="icono">◇</div>
+
+                        <h3>Caja Negra</h3>
+
+                    </div>
+
+                    <p>
+                        Se enfocan en verificar el comportamiento externo
+                        del sistema sin conocer su estructura interna.
+                    </p>
+
+                    <button class="ver-detalles" data-detalle="detalle4">
+                        Ver detalles →
+                    </button>
+
+                    <p class="detalle" id="detalle4">
+                        Se ingresan datos y se comprueban los resultados
+                        para ver si el programa funciona como se espera.
+                    </p>
+
+                </article>
+
+
+                <article class="tarjeta tarjeta-grande">
+
+                    <div class="cabecera-tarjeta">
+
+                        <div class="icono">&lt;/&gt;</div>
+
+                        <h3>Caja Blanca</h3>
+
+                    </div>
+
+                    <p>
+                        Se enfocan en verificar la estructura interna del
+                        código, analizando el flujo de ejecución,
+                        las condiciones y la cobertura del código.
+                    </p>
+
+                    <button class="ver-detalles" data-detalle="detalle5">
+                        Ver detalles →
+                    </button>
+
+                    <p class="detalle" id="detalle5">
+                        Se revisa el código para comprobar las instrucciones,
+                        condiciones y caminos que puede seguir el programa.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <img src="../imagenes/LOGOUES2.png" alt="UES Ultra Energy Scrum">
+
+        <p>UES · Ultra Energy Scrum</p>
+
+        <p>Tecnología · Trabajo en equipo · Mejora continua</p>
+
+            <p class="copyright">
+               2026 UES. Todos los derechos reservados.
+            </p>
+
+    </footer>
+
+
+        <script src="../js/aseguramiento_de_calidad.js"></script>
+
+    </body>
+
+</html>
