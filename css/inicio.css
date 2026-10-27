@@ -815,7 +815,17 @@ footer h3 {
 
 }
 
+.ig{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit:fill;
+}
 
+.ig:hover{
+    transform: scale(1.1);
+    transition: ease 0.5s;
+}
 
 /* COPYRIGHT */
 
