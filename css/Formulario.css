@@ -30,73 +30,104 @@ body {
 }
 
 
-/* BOTON MENU */
-
-.menu-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 32px;
-    cursor: pointer;
-}
-
-
 /* MENU HAMBURGUESA */
-
 .menu {
-    position: fixed;
-    top: 0;
-    right: -350px;
-    width: 330px;
-    height: 100vh;
-    background: #061526;
-    border-left: 2px solid #168cff;
-    box-shadow: -5px 0 25px rgba(0, 120, 255, 0.3);
-    padding: 90px 35px 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    transition: 0.3s;
-    z-index: 10;
+    margin-left: auto;
+    position: relative;
 }
 
-.menu.activo {
-    right: 0;
-}
+.menu-boton {
 
-.menu a {
+    width: 42px;
+    height: 38px;
+
+    background-color: #007fb3;
+
     color: white;
-    text-decoration: none;
-    font-size: 17px;
-    padding: 15px;
-    border-radius: 6px;
-    transition: 0.2s;
-}
 
-.menu a:hover {
-    background: #087eea;
-    padding-left: 22px;
-}
-
-.cerrar {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    background: none;
     border: none;
-    color: white;
-    font-size: 35px;
+
+    border-radius: 5px;
+
+    font-size: 22px;
+
     cursor: pointer;
+
 }
 
-.submenu {
-  display: none;
+.menu-opciones {
+
+    position: absolute;
+
+    right: 48px;
+    top: 0;
+
+    width: 230px;
+
+    background-color: #031b33;
+
+    border: 1px solid #007fb3;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateX(20px);
+
+    transition: 0.25s ease;
+
+    z-index: 1000;
+
 }
 
-.submenu li a {
-  padding-left: 22px;
-  color: #9ddcec;
-  font-size: 14px;
+.menu:hover .menu-opciones {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateX(0);
+
+}
+
+.menu-opciones a {
+
+    display: block;
+
+    padding: 11px 15px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #164363;
+
+    transition: 0.2s;
+
+}
+
+
+.menu-opciones a:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.menu-opciones a:hover {
+
+    background-color: #007fb3;
+
+    padding-left: 20px;
+
 }
 
 .fila-menu {

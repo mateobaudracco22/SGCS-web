@@ -1,14 +1,24 @@
 // ----- Menú hamburguesa -----
-function abrirMenu() {
-  document.getElementById("menu").classList.add("abierto");
-  document.getElementById("fondo").style.display = "block";
-}
+const boton = document.querySelector(".menu-boton");
+const opciones = document.querySelector(".menu-opciones");
 
-function cerrarMenu() {
-  document.getElementById("menu").classList.remove("abierto");
-  document.getElementById("fondo").style.display = "none";
-}
+boton.addEventListener("click", function() {
 
+    if (opciones.style.display === "block") {
+
+        opciones.style.display = "none";
+
+        boton.textContent = "☰";
+
+    } else {
+
+        opciones.style.display = "block";
+
+        boton.textContent = "✕";
+
+    }
+
+});
 function abrirSubmenu() {
   var submenu = document.getElementById("submenu");
   if (submenu.style.display == "block") {
@@ -17,6 +27,11 @@ function abrirSubmenu() {
     submenu.style.display = "block";
   }
 }
+document.addEventListener("DOMContentLoaded", function() {
+
+    lucide.createIcons();
+
+});
 
 // ----- Datos de la encuesta -----
 // puntos = [Scrum, Kanban, Cascada]

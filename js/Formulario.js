@@ -1,15 +1,23 @@
-const menuBtn = document.querySelector("#menuBtn");
-const menu = document.querySelector("#menu");
-const cerrar = document.querySelector("#cerrar");
+const boton = document.querySelector(".menu-boton");
+const opciones = document.querySelector(".menu-opciones");
 
-menuBtn.addEventListener("click", function() {
-    menu.classList.add("activo");
+boton.addEventListener("click", function() {
+
+    if (opciones.style.display === "block") {
+
+        opciones.style.display = "none";
+
+        boton.textContent = "☰";
+
+    } else {
+
+        opciones.style.display = "block";
+
+        boton.textContent = "✕";
+
+    }
+
 });
-
-cerrar.addEventListener("click", function() {
-    menu.classList.remove("activo");
-});
-
 function abrirSubmenu() {
   var submenu = document.getElementById("submenu");
   if (submenu.style.display == "block") {
@@ -18,6 +26,11 @@ function abrirSubmenu() {
     submenu.style.display = "block";
   }
 }
+document.addEventListener("DOMContentLoaded", function() {
+
+    lucide.createIcons();
+
+});
 
 const formulario = document.querySelector(".formulario");
 const enviarBtn = document.querySelector("#enviarBtn");

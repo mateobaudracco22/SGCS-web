@@ -9,39 +9,62 @@
 <body>
 
   <!-- ENCABEZADO -->
-  <div class="encabezado">
-    <div class="encabezado-interior">
-      <div class="logo">
-        <div class="logo-ues">UES</div>
-        <div class="logo-texto">ULTRA ENERGY SCRUM</div>
-      </div>
-      <button class="hamburguesa" onclick="abrirMenu()">&#9776;</button>
-    </div>
-  </div>
+  <header>
 
-  <!-- MENÚ HAMBURGUESA -->
-  <div class="fondo-oscuro" id="fondo" onclick="cerrarMenu()"></div>
-
-  <div class="menu-lateral" id="menu">
-    <button class="cerrar" onclick="cerrarMenu()">&times;</button>
-    <ul>
-      <li><a href="../Html/Inicio.html">Inicio</a></li>
-      <li><a href="../Html/SDLC.html">SDLC</a></li>
-      <li><a href="#">Procesos de Desarrollo</a></li>
-      <li>
-        <div class="fila-menu">
-          <a href="../Html/Metodologias.html">Metodologías ágiles</a>
-          <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+        <div class="logo">
+            <img src="../imagenes/LOGOUES2.png" alt="Logo UES">
         </div>
-        <ul class="submenu" id="submenu">
-          <li><a href="../Html/met_Conveniente.html">Metodología conveniente</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Recursos y aprendizaje</a></li>
-      <li><a href="../Html/nosotros.html">Sobre Nosotros</a></li>
-      <li><a href="../Html/Formulario.html">Contacto</a></li>
-    </ul>
-  </div>
+
+        <div class="titulo">
+            <h1>Sistemas de Gestión de Calidad</h1>
+            <p>Software • Procesos • Metodologías</p>
+        </div>
+
+        <nav class="menu">
+
+            <button class="menu-boton">
+                ☰
+            </button>
+
+            <div class="menu-opciones">
+
+                <a href="../Html/Inicio.html">Inicio</a>
+
+                <a href="../Html/SDLC.html">SDLC</a>
+
+                <a href="#procesos">
+                 Procesos de Desarrollo
+                </a>
+
+                <li>
+                    <div class="fila-menu">
+                        <a href="../Html/Metodologias.html">Herramientas interactivas</a>
+                        <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+                    </div>
+                    <ul class="submenu" id="submenu">
+                        <li><a href="../Html/Metodologias.html">Metodologías ágiles</a></li>
+                        <li><a href="../Html/met_Conveniente.html">Metodología conveniente</a></li>
+                    </ul>
+                </li>
+
+                <a href="#recursos">
+                  Recursos y Aprendizaje
+                </a>
+
+                <a href="../Html/nosotros.html">
+                  Sobre Nosotros
+                </a>
+
+                <a href="../Html/Formulario.html">
+                 Contacto
+                 </a>
+
+            </div>
+
+
+        </nav>
+
+    </header>
 
   <!-- PORTADA -->
   <div class="portada">

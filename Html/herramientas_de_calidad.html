@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UES - Herramientas de Calidad</title>
+    <link rel="stylesheet" href="../css/herramientas_de_calidad.css">
+</head>
+<body>
+
+    <header class="cabecera">
+
+        <div class="barra-superior">
+            <div class="logo">
+                <span class="logo-ues">UES</span>
+                <span class="logo-seccion">· HERRAMIENTAS DE CALIDAD</span>
+            </div>
+
+           <nav class="menu">
+
+            <button class="menu-boton">
+                ☰
+            </button>
+
+            <div class="menu-opciones">
+
+                <a href="../Html/Inicio.html">Inicio</a>
+
+                <a href="../Html/SDLC.html">SDLC</a>
+
+                <a href="#procesos">
+                 Procesos de Desarrollo
+                </a>
+
+                <li>
+                    <div class="fila-menu">
+                        <a href="../Html/Metodologias.html">Herramientas interactivas</a>
+                        <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+                    </div>
+                    <ul class="submenu" id="submenu">
+                        <li><a href="../Html/met_Conveniente.html">Metodología conveniente</a></li>
+                        <li><a href="../Html/Metodologias.html">Metodologías ágiles</a></li>
+                    </ul>
+                </li>
+
+                <a href="#recursos">
+                  Recursos y Aprendizaje
+                </a>
+
+                <a href="../Html/nosotros.html">
+                  Sobre Nosotros
+                </a>
+
+                <a href="../Html/Formulario.html">
+                 Contacto
+                 </a>
+
+            </div>
+
+
+        </nav>
+        </div>
+
+        <div class="portada-texto">
+            <h1>Herramientas de Calidad</h1>
+            <p>Conocé herramientas para gestionar pruebas, rastrear defectos y analizar la calidad del software.</p>
+        </div>
+
+        <div class="circulo"></div>
+    </header>
+
+    <main class="contenedor">
+
+        <div class="filtros">
+            <button class="filtro activo" onclick="filtrar('todas', this)">
+                <i data-lucide="layout-grid"></i> Todas
+            </button>
+            <button class="filtro" onclick="filtrar('bug', this)">
+                <i data-lucide="bug"></i> Bug Trackers
+            </button>
+            <button class="filtro" onclick="filtrar('linter', this)">
+                <i data-lucide="code"></i> Linters
+            </button>
+            <button class="filtro" onclick="filtrar('test', this)">
+                <i data-lucide="clipboard-check"></i> Test Management
+            </button>
+        </div>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta" data-categoria="bug">
+                <div class="tarjeta-arriba">
+                    <div class="logo-herramienta color-jira">J</div>
+                    <div>
+                        <h3>Jira</h3>
+                        <span class="etiqueta etiqueta-bug">Bug Trackers</span>
+                    </div>
+                </div>
+                <p>Permite rastrear, gestionar y resolver defectos de software. Ideal para equipos ágiles y proyectos grandes.</p>
+            </div>
+
+            <div class="tarjeta" data-categoria="bug">
+                <div class="tarjeta-arriba">
+                    <div class="logo-herramienta color-bugzilla">B</div>
+                    <div>
+                        <h3>Bugzilla</h3>
+                        <span class="etiqueta etiqueta-bug">Bug Trackers</span>
+                    </div>
+                </div>
+                <p>Sistema de seguimiento de errores open source. Simple y efectivo para proyectos de cualquier tamaño.</p>
+            </div>
+
+            <div class="tarjeta" data-categoria="linter">
+                <div class="tarjeta-arriba">
+                    <div class="logo-herramienta color-eslint">E</div>
+                    <div>
+                        <h3>ESLint</h3>
+                        <span class="etiqueta etiqueta-linter">Linters</span>
+                    </div>
+                </div>
+                <p>Analiza el código JavaScript y encuentra errores de estilo, posibles bugs y malas prácticas.</p>
+            </div>
+
+            <div class="tarjeta" data-categoria="linter">
+                <div class="tarjeta-arriba">
+                    <div class="logo-herramienta color-sonar">S</div>
+                    <div>
+                        <h3>SonarQube</h3>
+                        <span class="etiqueta etiqueta-linter">Linters</span>
+                    </div>
+                </div>
+                <p>Analiza la calidad del código y detecta vulnerabilidades, bugs y code smells.</p>
+            </div>
+
+            <div class="tarjeta" data-categoria="test">
+                <div class="tarjeta-arriba">
+                    <div class="logo-herramienta color-testrail">T</div>
+                    <div>
+                        <h3>TestRail</h3>
+                        <span class="etiqueta etiqueta-test">Test Management</span>
+                    </div>
+                </div>
+                <p>Permite organizar, ejecutar y hacer seguimiento de casos de prueba de forma eficiente.</p>
+            </div>
+
+            <div class="tarjeta" data-categoria="test">
+                <div class="tarjeta-arriba">
+                    <div class="logo-herramienta color-zephyr">Z</div>
+                    <div>
+                        <h3>Zephyr</h3>
+                        <span class="etiqueta etiqueta-test">Test Management</span>
+                    </div>
+                </div>
+                <p>Gestión de pruebas integrada con Jira. Ideal para equipos ágiles.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/herramientas_de_calidad.js"></script>
+</body>
+</html>

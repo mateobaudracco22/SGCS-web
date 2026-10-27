@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef5fa;
+    color: #16324a;
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+    position: relative;
+    background: linear-gradient(135deg, #031b33, #06355a);
+    color: white;
+    padding: 18px 4% 34px 4%;
+}
+
+.barra-superior {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.logo-ues {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2ec4f0;
+}
+
+.logo-seccion {
+    font-size: 11px;
+    font-weight: bold;
+    color: #7fd3e8;
+    margin-left: 6px;
+}
+
+.portada-texto {
+    position: relative;
+    z-index: 1;
+}
+
+.portada-texto h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.portada-texto p {
+    font-size: 14px;
+    color: #c4dcea;
+}
+
+.circulo {
+    position: absolute;
+    top: 70px;
+    right: 90px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #0b4a78;
+    z-index: 0;
+}
+
+/* ---------- Menú hamburguesa ---------- */
+.menu {
+    margin-left: auto;
+    position: relative;
+}
+
+.menu-boton {
+    width: 42px;
+    height: 38px;
+    background-color: #007fb3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.menu-opciones {
+    position: absolute;
+    right: 48px;
+    top: 0;
+    width: 230px;
+    background-color: #031b33;
+    border: 1px solid #007fb3;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20px);
+    transition: 0.25s ease;
+    z-index: 1000;
+}
+
+.menu:hover .menu-opciones {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Se agrega con el clic del botón */
+.menu-opciones.abierto {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.menu-opciones a {
+    display: block;
+    padding: 11px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom: 1px solid #164363;
+    transition: 0.2s;
+}
+
+.menu-opciones a:last-child {
+    border-bottom: none;
+}
+
+.menu-opciones a:hover {
+    background-color: #007fb3;
+    padding-left: 20px;
+}
+
+.fila-menu {
+    display: flex;
+    border-bottom: 1px solid #164363;
+}
+
+.menu-opciones .fila-menu a {
+    flex: 1;
+    border-bottom: none;
+}
+
+.flecha {
+    background: none;
+    border: none;
+    border-left: 1px solid #164363;
+    color: white;
+    font-size: 18px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.flecha:hover {
+    color: #7fd3e8;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    background-color: #052a4a;
+}
+
+.submenu a {
+    padding-left: 28px;
+    font-size: 12px;
+    color: #9ddcec;
+}
+
+/* ---------- Contenido ---------- */
+.contenedor {
+    width: 92%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 0 50px 0;
+}
+
+/* ---------- Botones de filtro ---------- */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.filtro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    color: #16324a;
+    border: 1.5px solid #29b6e8;
+    border-radius: 8px;
+    padding: 11px 22px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filtro svg {
+    width: 16px;
+    height: 16px;
+}
+
+.filtro:hover {
+    background-color: #e3f5fc;
+}
+
+.filtro.activo {
+    background-color: #0a9bd9;
+    border-color: #0a9bd9;
+    color: white;
+}
+
+/* ---------- Tarjetas ---------- */
+.tarjetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 1.5px solid #3dbdea;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(10, 155, 217, 0.1);
+}
+
+.tarjeta-arriba {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.tarjeta h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.tarjeta p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #4b6378;
+}
+
+/* Logo de cada herramienta (letra sobre un cuadro de color) */
+.logo-herramienta {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.color-jira { background-color: #2684ff; }
+.color-bugzilla { background-color: #3b6fd8; }
+.color-eslint { background-color: #4b32c3; }
+.color-sonar { background-color: #1d8fe1; }
+.color-testrail { background-color: #2e9e6f; }
+.color-zephyr { background-color: #1f7fd0; }
+
+/* Etiquetas de categoría */
+.etiqueta {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 12px;
+    border-radius: 12px;
+}
+
+.etiqueta-bug { background-color: #fde2e2; color: #c0392b; }
+.etiqueta-linter { background-color: #d9f5e5; color: #1e7a4a; }
+.etiqueta-test { background-color: #e6e3fb; color: #5b4bc4; }
+
+/* ---------- Pantallas chicas ---------- */
+@media (max-width: 800px) {
+    .tarjetas {
+        grid-template-columns: 1fr 1fr;
+    }
+    .circulo {
+        display: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+    .portada-texto h1 {
+        font-size: 26px;
+    }
+}
