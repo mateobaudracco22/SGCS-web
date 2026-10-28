@@ -83,127 +83,140 @@ header {
 
 }
 
+/* ---------- Menú hamburguesa ---------- */
 .menu {
     margin-left: auto;
     position: relative;
 }
 
 .menu-boton {
-
     width: 42px;
     height: 38px;
-
     background-color: #007fb3;
-
     color: white;
-
     border: none;
-
     border-radius: 5px;
-
     font-size: 22px;
-
     cursor: pointer;
-
 }
 
 .menu-opciones {
-
     position: absolute;
-
-    right: 48px;
+    right: 42px;              /* pegado al botón, sin espacio en el medio */
     top: 0;
-
-    width: 230px;
-
+    width: 280px;
+    max-width: calc(100vw - 70px);
+    max-height: 80vh;         /* si el menú es muy largo, tiene scroll */
+    overflow-y: auto;
     background-color: #031b33;
-
     border: 1px solid #007fb3;
-
     border-radius: 6px;
-
-    overflow: hidden;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     opacity: 0;
-
     visibility: hidden;
-
     transform: translateX(20px);
-
     transition: 0.25s ease;
-
     z-index: 1000;
-
 }
 
 .menu:hover .menu-opciones {
-
     opacity: 1;
-
     visibility: visible;
-
     transform: translateX(0);
-
 }
 
+/* Se agrega con el clic del botón */
+.menu-opciones.abierto {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Quitar los puntitos de las listas */
+.menu-opciones li {
+    list-style: none;
+}
+
+/* ---------- Enlaces principales ---------- */
 .menu-opciones a {
-
     display: block;
-
-    padding: 11px 15px;
-
+    padding: 12px 15px;
     color: white;
-
     text-decoration: none;
-
     font-size: 13px;
-
+    line-height: 1.3;
     border-bottom: 1px solid #164363;
-
     transition: 0.2s;
-
 }
-
-
-.menu-opciones a:last-child {
-
-    border-bottom: none;
-
-}
-
 
 .menu-opciones a:hover {
-
     background-color: #007fb3;
-
     padding-left: 20px;
-
 }
 
+/* ---------- Fila con flecha ---------- */
 .fila-menu {
-  display: flex;
-  border-bottom: 1px solid #1d4560;
+    display: flex;
+    border-bottom: 1px solid #164363;
 }
 
-.menu-lateral .fila-menu a {
-  flex: 1;
-  border-bottom: none;
+.menu-opciones .fila-menu a {
+    flex: 1;
+    border-bottom: none;
 }
 
 .flecha {
-  background: none;
-  border: none;
-  border-left: 1px solid #1d4560;
-  color: white;
-  font-size: 18px;
-  width: 50px;
-  cursor: pointer;
+    width: 46px;
+    background: none;
+    border: none;
+    border-left: 1px solid #164363;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .flecha:hover {
-  color: #7fd3e8;
+    background-color: #007fb3;
+}
+
+.flecha.activa {
+    background-color: #0b3a5e;
+    color: #7fd3e8;
+}
+
+/* ---------- Submenús ---------- */
+.submenu {
+    display: none;
+    background-color: #052a4a;
+}
+
+.submenu.mostrar {
+    display: block;
+}
+
+.menu-opciones .submenu a {
+    padding-left: 28px;
+    font-size: 12px;
+    color: #b5e3f1;
+    border-bottom: 1px solid #0f3a5c;
+}
+
+.menu-opciones .submenu a:hover {
+    padding-left: 34px;
+    color: white;
+}
+
+/* Detalles del final del menú */
+.menu-opciones > li:last-child .fila-menu {
+    border-bottom: none;
+}
+
+.menu-opciones > li:last-child .submenu {
+    border-top: 1px solid #164363;
+}
+
+.menu-opciones > li:last-child .submenu li:last-child a {
+    border-bottom: none;
 }
 
 /* ---------- Portada ---------- */

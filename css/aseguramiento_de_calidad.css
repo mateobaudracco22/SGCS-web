@@ -27,108 +27,140 @@ body {
     display: block;
 }
 
+/* ---------- Menú hamburguesa ---------- */
 .menu {
+    margin-left: auto;
     position: relative;
 }
 
 .menu-boton {
-    background: transparent;
-    border: 1px solid #168cff;
+    width: 42px;
+    height: 38px;
+    background-color: #007fb3;
     color: white;
-    padding: 7px 12px;
-    font-size: 25px;
+    border: none;
     border-radius: 5px;
+    font-size: 22px;
     cursor: pointer;
-}
-
-.menu-boton:hover {
-    background: #087eea;
 }
 
 .menu-opciones {
     position: absolute;
-    top: 48px;
-    right: 0;
+    right: 42px;              /* pegado al botón, sin espacio en el medio */
+    top: 0;
     width: 280px;
-    background: #061526;
-    border: 1px solid #168cff;
+    max-width: calc(100vw - 70px);
+    max-height: 80vh;         /* si el menú es muy largo, tiene scroll */
+    overflow-y: auto;
+    background-color: #031b33;
+    border: 1px solid #007fb3;
     border-radius: 6px;
-    padding: 12px;
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    box-shadow: 0 8px 20px #0005;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20px);
+    transition: 0.25s ease;
+    z-index: 1000;
 }
 
-.menu-opciones.activo {
-    display: flex;
+.menu:hover .menu-opciones {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
 }
 
-.menu-opciones > a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 12px;
-    border-radius: 4px;
+/* Se agrega con el clic del botón */
+.menu-opciones.abierto {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
 }
 
-.menu-opciones > a:hover {
-    background: #087eea;
-}
-
-.elemento-submenu {
+/* Quitar los puntitos de las listas */
+.menu-opciones li {
     list-style: none;
 }
 
-.fila-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.fila-menu > a {
+/* ---------- Enlaces principales ---------- */
+.menu-opciones a {
+    display: block;
+    padding: 12px 15px;
     color: white;
     text-decoration: none;
-    font-size: 14px;
-    padding: 12px;
-    flex: 1;
+    font-size: 13px;
+    line-height: 1.3;
+    border-bottom: 1px solid #164363;
+    transition: 0.2s;
 }
 
-.fila-menu > a:hover {
-    color: #36d8ff;
+.menu-opciones a:hover {
+    background-color: #007fb3;
+    padding-left: 20px;
+}
+
+/* ---------- Fila con flecha ---------- */
+.fila-menu {
+    display: flex;
+    border-bottom: 1px solid #164363;
+}
+
+.menu-opciones .fila-menu a {
+    flex: 1;
+    border-bottom: none;
 }
 
 .flecha {
-    background: transparent;
-    color: #36d8ff;
+    width: 46px;
+    background: none;
     border: none;
-    padding: 10px;
+    border-left: 1px solid #164363;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 14px;
 }
 
+.flecha:hover {
+    background-color: #007fb3;
+}
+
+.flecha.activa {
+    background-color: #0b3a5e;
+    color: #7fd3e8;
+}
+
+/* ---------- Submenús ---------- */
 .submenu {
     display: none;
-    list-style: none;
-    padding-left: 15px;
+    background-color: #052a4a;
 }
 
-.submenu.abierto {
+.submenu.mostrar {
     display: block;
 }
 
-.submenu a {
-    display: block;
-    color: #a9dfff;
-    text-decoration: none;
-    font-size: 13px;
-    padding: 12px;
-    border-left: 2px solid #168cff;
+.menu-opciones .submenu a {
+    padding-left: 28px;
+    font-size: 12px;
+    color: #b5e3f1;
+    border-bottom: 1px solid #0f3a5c;
 }
 
-.submenu a:hover {
-    background: #0b3152;
+.menu-opciones .submenu a:hover {
+    padding-left: 34px;
+    color: white;
+}
+
+/* Detalles del final del menú */
+.menu-opciones > li:last-child .fila-menu {
+    border-bottom: none;
+}
+
+.menu-opciones > li:last-child .submenu {
+    border-top: 1px solid #164363;
+}
+
+.menu-opciones > li:last-child .submenu li:last-child a {
+    border-bottom: none;
 }
 
 .portada {
