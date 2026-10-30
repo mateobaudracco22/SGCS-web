@@ -73,7 +73,7 @@ for (var j = 0; j < enlaces.length; j++) {
 
 // ----- Comparador -----
 function mostrar() {
-  var nombres = ["scrum", "kanban", "cascada", "xp"];
+  var nombres = ["scrum", "kanban", "cascada", "xp", "espiral", "modelov", "lean", "crystal"];
   var total = 0;
 
   for (var i = 0; i < nombres.length; i++) {

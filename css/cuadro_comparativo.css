@@ -324,7 +324,7 @@ h2 {
 
 table {
   width: 100%;
-  min-width: 560px;
+  min-width: 1100px;
   border-collapse: collapse;
 }
 
@@ -365,6 +365,10 @@ th, td {
 .borde-kanban { border-top: 5px solid #1597b5; }
 .borde-cascada { border-top: 5px solid #6a4fc2; }
 .borde-xp { border-top: 5px solid #e08a1e; }
+.borde-espiral { border-top: 5px solid #c2417d; }
+.borde-modelov { border-top: 5px solid #5a6b7d; }
+.borde-lean { border-top: 5px solid #3a9a47; }
+.borde-crystal { border-top: 5px solid #d4494f; }
 
 /* Etiquetas de colores */
 .verde, .amarillo, .rojo {

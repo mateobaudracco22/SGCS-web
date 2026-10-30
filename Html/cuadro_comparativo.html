@@ -141,6 +141,27 @@
         <input type="checkbox" id="chk-xp" onclick="mostrar()">
         <span><b>XP</b><br><small>Prácticas técnicas ágiles</small></span>
       </label>
+
+      <!-- METODOLOGÍAS AGREGADAS -->
+      <label class="tarjeta" id="card-espiral">
+        <input type="checkbox" id="chk-espiral" onclick="mostrar()">
+        <span><b>Espiral</b><br><small>Ciclos guiados por riesgos</small></span>
+      </label>
+
+      <label class="tarjeta" id="card-modelov">
+        <input type="checkbox" id="chk-modelov" onclick="mostrar()">
+        <span><b>Modelo en V</b><br><small>Cada fase tiene su prueba</small></span>
+      </label>
+
+      <label class="tarjeta" id="card-lean">
+        <input type="checkbox" id="chk-lean" onclick="mostrar()">
+        <span><b>Lean</b><br><small>Eliminar el desperdicio</small></span>
+      </label>
+
+      <label class="tarjeta" id="card-crystal">
+        <input type="checkbox" id="chk-crystal" onclick="mostrar()">
+        <span><b>Crystal</b><br><small>Personas y comunicación</small></span>
+      </label>
     </div>
 
     <div class="titulo-tabla">
@@ -158,6 +179,10 @@
           <th class="col-kanban borde-kanban"><span class="nombre">Kanban</span><span class="sub">Flujo continuo</span></th>
           <th class="col-cascada borde-cascada"><span class="nombre">Cascada</span><span class="sub">Secuencial por fases</span></th>
           <th class="col-xp borde-xp"><span class="nombre">XP</span><span class="sub">Ciclos cortos y calidad técnica</span></th>
+          <th class="col-espiral borde-espiral"><span class="nombre">Espiral</span><span class="sub">Iterativo guiado por riesgos</span></th>
+          <th class="col-modelov borde-modelov"><span class="nombre">Modelo en V</span><span class="sub">Secuencial con pruebas por fase</span></th>
+          <th class="col-lean borde-lean"><span class="nombre">Lean</span><span class="sub">Eliminar desperdicio</span></th>
+          <th class="col-crystal borde-crystal"><span class="nombre">Crystal</span><span class="sub">Centrado en las personas</span></th>
         </tr>
 
         <tr>
@@ -166,6 +191,10 @@
           <td class="col-kanban">Continuas, sin iteraciones</td>
           <td class="col-cascada">Una sola entrega final</td>
           <td class="col-xp">Versiones pequeñas cada 1 o 2 semanas</td>
+          <td class="col-espiral">Una versión más completa en cada ciclo</td>
+          <td class="col-modelov">Una sola entrega final, validada fase por fase</td>
+          <td class="col-lean">Frecuentes, entregando solo lo que aporta valor</td>
+          <td class="col-crystal">Frecuentes, en iteraciones cortas</td>
         </tr>
 
         <tr>
@@ -174,6 +203,10 @@
           <td class="col-kanban">Sin roles obligatorios</td>
           <td class="col-cascada">Jefe de proyecto y analistas</td>
           <td class="col-xp">Cliente, programadores y coach</td>
+          <td class="col-espiral">Jefe de proyecto, analistas de riesgos y equipo técnico</td>
+          <td class="col-modelov">Jefe de proyecto, analistas, desarrolladores y testers</td>
+          <td class="col-lean">Equipo autónomo con apoyo de la dirección</td>
+          <td class="col-crystal">Roles flexibles según el tamaño del equipo</td>
         </tr>
 
         <tr>
@@ -182,6 +215,10 @@
           <td class="col-kanban"><span class="verde">Bienvenidos</span> en cualquier momento</td>
           <td class="col-cascada"><span class="rojo">Costosos</span> y difíciles</td>
           <td class="col-xp"><span class="verde">Bienvenidos</span> en todo momento</td>
+          <td class="col-espiral"><span class="amarillo">Moderados</span> entre ciclos</td>
+          <td class="col-modelov"><span class="rojo">Costosos</span> y difíciles</td>
+          <td class="col-lean"><span class="verde">Bienvenidos</span>, se decide lo más tarde posible</td>
+          <td class="col-crystal"><span class="verde">Bienvenidos</span> adaptando el método</td>
         </tr>
 
         <tr>
@@ -190,6 +227,10 @@
           <td class="col-kanban"><span class="amarillo">Bajo demanda</span></td>
           <td class="col-cascada"><span class="verde">Completa al inicio</span></td>
           <td class="col-xp"><span class="amarillo">Por iteración</span></td>
+          <td class="col-espiral"><span class="amarillo">Por ciclo</span></td>
+          <td class="col-modelov"><span class="verde">Completa al inicio</span></td>
+          <td class="col-lean"><span class="amarillo">Según la demanda</span></td>
+          <td class="col-crystal"><span class="amarillo">Por iteración</span></td>
         </tr>
 
         <tr>
@@ -198,6 +239,10 @@
           <td class="col-kanban">Soporte y mantenimiento</td>
           <td class="col-cascada">Requisitos estables y cerrados</td>
           <td class="col-xp">Equipos pequeños con alta calidad técnica</td>
+          <td class="col-espiral">Proyectos grandes, costosos y con muchos riesgos</td>
+          <td class="col-modelov">Sistemas críticos donde las pruebas son clave</td>
+          <td class="col-lean">Equipos que quieren reducir desperdicios y ganar eficiencia</td>
+          <td class="col-crystal">Equipos pequeños que priorizan la comunicación</td>
         </tr>
       </table>
     </div>
