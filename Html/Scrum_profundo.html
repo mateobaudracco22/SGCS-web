@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UES - Scrum en profundidad</title>
+    <link rel="stylesheet" href="../css/scrum_profundo.css">
+</head>
+<body>
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+
+        <div class="barra-superior">
+            <div class="logo">
+                <div class="logo-ues"><img src="../imagenes/LOGOUES2.png" alt="UES"></div>
+                <div class="logo-texto">ULTRA ENERGY SCRUM</div>
+            </div>
+
+            <nav class="menu">
+
+                <button class="menu-boton">
+                    ☰
+                </button>
+
+                <div class="menu-opciones">
+
+                    <a href="../Html/Inicio.html">Inicio</a>
+
+                    <li>
+                        <div class="fila-menu">
+                            <a href="../Html/herramientas_de_calidad.html">Gestion de Calidad</a>
+                            <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+                        </div>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="#">Us-2 Fundamentos</a></li>
+                            <li><a href="../Html/tecnicas_de_aseguramiento.html">Tecnicas de Aseguramiento</a></li>
+                            <li><a href="../Html/aseguramiento_de_calidad.html">Herramientas de Calidad</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="fila-menu">
+                            <a href="../Html/herramientas_de_calidad.html">Procesos de Desarrollo del Software</a>
+                            <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+                        </div>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="../Html/SDLC.html">Ciclo de Vida del Software</a></li>
+                            <li><a href="">US-6 Modelos Tradicionales</a></li>
+                            <li><a href="#">US-7 Modelos Tradicionales</a></li>
+                            <li><a href="#">Metodologias </a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="fila-menu">
+                            <a href="../Html/herramientas_de_calidad.html">Metodologias en Detalles</a>
+                            <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+                        </div>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="../Html/scrum_profundo.html">Sección Profunda de Scrum</a></li>
+                            <li><a href="../Html/kanban_profundo.html">Sección Profunda de Kanban</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="fila-menu">
+                            <a href="../Html/herramientas_de_calidad.html">Recursos y Aprendizaje</a>
+                            <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+                        </div>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="#">US-12 Glosario</a></li>
+                            <li><a href="#">US-13 Preguntas Frecuentes</a></li>
+                            <li><a href="#">US-14 Enlaces de Interes</a></li>
+                            <li><a href="#">US-15 Ejercicios y Casos Prácticos</a></li>
+                        </ul>
+                    </li>
+
+                    <a href="../Html/nosotros.html">
+                      Sobre Nosotros
+                    </a>
+
+                    <a href="../Html/Formulario.html">
+                     Contacto
+                    </a>
+
+                    <li>
+                        <div class="fila-menu">
+                            <a href="../Html/herramientas_de_calidad.html">Herramientas interactivas</a>
+                            <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+                        </div>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="../Html/cuadro_comparativo.html">Cuadro Comparativo</a></li>
+                            <li><a href="../Html/Encuesta.html">Encuesta</a></li>
+                        </ul>
+                    </li>
+
+                </div>
+
+            </nav>
+        </div>
+
+        <div class="portada">
+            <div class="portada-texto">
+                <p class="etiqueta">US-10 · PROFUNDA DE SCRUM</p>
+                <h1>Scrum en profundidad</h1>
+                <p class="descripcion">Conocé en detalle los roles, eventos y artefactos de Scrum, 
+                    y cómo se relacionan en un ciclo de trabajo ágil y colaborativo.</p>
+            </div>
+
+            <div class="ciclo">
+                <div class="ciclo-anillo"></div>
+                <div class="ciclo-texto">
+                    Inspección<br>
+                    Adaptación<br>
+                    Mejora Continua
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="contenedor">
+
+        <!-- Pestañas -->
+        <div class="tabs">
+            <button class="tab activa" onclick="mostrarPanel('roles', this)">
+                <i data-lucide="user"></i> Roles
+            </button>
+            <button class="tab" onclick="mostrarPanel('eventos', this)">
+                <i data-lucide="calendar-days"></i> Eventos / Ceremonias
+            </button>
+            <button class="tab" onclick="mostrarPanel('artefactos', this)">
+                <i data-lucide="database"></i> Artefactos
+            </button>
+        </div>
+
+        <!-- PANEL: ROLES -->
+        <div class="panel" id="panel-roles">
+            <div class="grupo">
+
+                <div class="tarjetas">
+                    <div class="tarjeta">
+                        <div class="tarjeta-arriba">
+                            <div class="icono-circulo"><i data-lucide="user"></i></div>
+                            <h3>Product Owner</h3>
+                        </div>
+                        <p>Representa al cliente y al negocio. Define el valor del producto y <b>prioriza el backlog</b>.</p>
+                        <span class="pastilla">Enfoque: Valor de negocio</span>
+                    </div>
+
+                    <div class="tarjeta">
+                        <div class="tarjeta-arriba">
+                            <div class="icono-circulo"><i data-lucide="users"></i></div>
+                            <h3>Scrum Master</h3>
+                        </div>
+                        <p>Facilita el proceso, elimina impedimentos y asegura que se sigan las prácticas de Scrum.</p>
+                        <span class="pastilla">Enfoque: Proceso</span>
+                    </div>
+
+                    <div class="tarjeta">
+                        <div class="tarjeta-arriba">
+                            <div class="icono-circulo"><i data-lucide="code"></i></div>
+                            <h3>Development Team</h3>
+                        </div>
+                        <p>Desarrolla el producto en incrementos. Autoorganizado y multifuncional.</p>
+                        <span class="pastilla">Enfoque: Entrega</span>
+                    </div>
+                </div>
+
+                <div class="aside">
+                    <h4><i data-lucide="link"></i> ¿Cómo se relacionan?</h4>
+                    <p>Los tres roles trabajan juntos para maximizar el valor del producto, mejorar continuamente y lograr los objetivos del sprint.</p>
+                    <div class="frase">"Scrum no es un proceso, es un marco de trabajo para pensar y trabajar."</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- PANEL: EVENTOS -->
+        <div class="panel" id="panel-eventos">
+            <div class="grupo">
+
+                <div class="tarjetas">
+                    <div class="tarjeta">
+                        <div class="tarjeta-arriba">
+                            <div class="icono-circulo"><i data-lucide="clipboard-list"></i></div>
+                            <h3>Sprint Planning</h3>
+                        </div>
+                        <p>El equipo define qué se va a hacer en el sprint y cómo se va a lograr.</p>
+                        <span class="pastilla">Cuándo: Al inicio del sprint</span>
+                    </div>
+
+                    <div class="tarjeta">
+                        <div class="tarjeta-arriba">
+                            <div class="icono-circulo"><i data-lucide="calendar-days"></i></div>
+                            <h3>Daily Scrum</h3>
+                        </div>
+                        <p>Reunión corta para sincronizar al equipo, ver avances y detectar bloqueos.</p>
+                        <span class="pastilla">Cuándo: Todos los días</span>
+                    </div>
+
+                    <div class="tarjeta">
+                        <div class="tarjeta-arriba">
+                            <div class="icono-circulo"><i data-lucide="presentation"></i></div>
+                            <h3>Sprint Review</h3>
+                        </div>
+                        <p>Se muestra el incremento terminado y se recibe feedback del cliente.</p>
+                        <span class="pastilla">Cuándo: Al final del sprint</span>
+                    </div>
+
+                    <div class="tarjeta">
+                        <div class="tarjeta-arriba">
+                            <div class="icono-circulo"><i data-lucide="refresh-cw"></i></div>
+                            <h3>Sprint Retrospective</h3>
+                        </div>
+                        <p>El equipo analiza cómo trabajó y define mejoras para el próximo sprint.</p>
+                        <span class="pastilla">Cuándo: Después de la review</span>
+                    </div>
+                </div>
+
+                <div class="aside">
+                    <h4><i data-lucide="link"></i> ¿Cómo se relacionan?</h4>
+                    <p>Los eventos dan ritmo al trabajo. Cada uno es una oportunidad para inspeccionar lo hecho y adaptar lo que viene.</p>
+                    <div class="frase">Todos ocurren dentro del Sprint, que es el contenedor de los demás eventos.</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- PANEL: ARTEFACTOS -->
+        <div class="panel" id="panel-artefactos">
+            <div class="grupo">
+
+                <div class="tarjetas">
+                    <div class="tarjeta">
+                        <div class="tarjeta-arriba">
+                            <div class="icono-circulo"><i data-lucide="list-checks"></i></div>
+                            <h3>Product Backlog</h3>
+                        </div>
+                        <p>Lista ordenada de todo lo que necesita el producto. La administra el Product Owner.</p>
+                        <span class="pastilla">Compromiso: Product Goal</span>
+                    </div>
+
+                    <div class="tarjeta">
+                        <div class="tarjeta-arriba">
+                            <div class="icono-circulo"><i data-lucide="clipboard-list"></i></div>
+                            <h3>Sprint Backlog</h3>
+                        </div>
+                        <p>Lo elegido para el sprint más el plan para entregarlo. Pertenece al equipo de desarrollo.</p>
+                        <span class="pastilla">Compromiso: Sprint Goal</span>
+                    </div>
+
+                    <div class="tarjeta">
+                        <div class="tarjeta-arriba">
+                            <div class="icono-circulo"><i data-lucide="package"></i></div>
+                            <h3>Incremento</h3>
+                        </div>
+                        <p>Resultado utilizable de cada sprint, que cumple con la definición de terminado.</p>
+                        <span class="pastilla">Compromiso: Definición de Terminado</span>
+                    </div>
+                </div>
+
+                <div class="aside">
+                    <h4><i data-lucide="link"></i> ¿Cómo se relacionan?</h4>
+                    <p>Cada artefacto tiene un compromiso que da foco y transparencia al trabajo del equipo.</p>
+                    <div class="frase">El Product Backlog alimenta al Sprint Backlog y este produce el Incremento.</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- EL SPRINT -->
+        <section class="seccion-sprint">
+
+            <div class="sprint-titulo">
+                <div>
+                    <h2><i data-lucide="refresh-cw"></i> El Sprint: de 1 a 4 semanas</h2>
+                    <p class="subtitulo">Hacé clic en cada evento para ver su duración y objetivo.</p>
+                </div>
+
+                <div class="selector">
+                    <label for="duracion">Duración del sprint:</label>
+                    <select id="duracion" onchange="cambiarDuracion()">
+                        <option>1 semana</option>
+                        <option selected>2 semanas</option>
+                        <option>3 semanas</option>
+                        <option>4 semanas</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="flujo">
+
+                <div class="extremo">
+                    <div class="extremo-circulo"><i data-lucide="play"></i></div>
+                    <span>Inicio<br>del Sprint</span>
+                </div>
+
+                <span class="flecha-flujo">&rarr;</span>
+
+                <div class="evento" onclick="seleccionarEvento(this)">
+                    <div class="evento-icono"><i data-lucide="calendar-days"></i></div>
+                    <div>
+                        <b>Daily Meeting</b><br>
+                        <span class="duracion">15 minutos</span>
+                        <p class="objetivo"><b>Objetivo:</b> Sincronizar al equipo, ver avances y detectar bloqueos.</p>
+                    </div>
+                </div>
+
+                <span class="flecha-flujo">&rarr;</span>
+
+                <div class="evento seleccionado" onclick="seleccionarEvento(this)">
+                    <div class="evento-icono"><i data-lucide="presentation"></i></div>
+                    <div>
+                        <b>Sprint Review</b><br>
+                        <span class="duracion" id="tiempoReview">Hasta 2 horas</span>
+                        <p class="objetivo"><b>Objetivo:</b> Mostrar el incremento y recibir feedback del cliente.</p>
+                    </div>
+                </div>
+
+                <span class="flecha-flujo">&rarr;</span>
+
+                <div class="evento" onclick="seleccionarEvento(this)">
+                    <div class="evento-icono"><i data-lucide="refresh-cw"></i></div>
+                    <div>
+                        <b>Sprint Retrospective</b><br>
+                        <span class="duracion" id="tiempoRetro">Hasta 1,5 horas</span>
+                        <p class="objetivo"><b>Objetivo:</b> Analizar qué salió bien, qué mejorar y definir acciones.</p>
+                    </div>
+                </div>
+
+                <span class="flecha-flujo">&rarr;</span>
+
+                <div class="extremo">
+                    <div class="extremo-circulo"><i data-lucide="check"></i></div>
+                    <span>Fin del<br>Sprint</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/scrum_profundo.js"></script>
+</body>
+</html>

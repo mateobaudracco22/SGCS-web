@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UES - Kanban: gestión de procesos</title>
+    <link rel="stylesheet" href="../css/kanban_profundo.css">
+</head>
+<body>
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+
+        <div class="barra-superior">
+            <div class="logo">
+                <div class="logo-ues"><img src="../imagenes/LOGOUES2.png" alt="UES"></div>
+                <div class="logo-texto">ULTRA ENERGY SCRUM</div>
+            </div>
+
+            <nav class="menu">
+
+                <button class="menu-boton">
+                    ☰
+                </button>
+
+                <div class="menu-opciones">
+
+                    <a href="../Html/Inicio.html">Inicio</a>
+
+                    <li>
+                        <div class="fila-menu">
+                            <a href="../Html/herramientas_de_calidad.html">Gestion de Calidad</a>
+                            <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+                        </div>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="#">Us-2 Fundamentos</a></li>
+                            <li><a href="../Html/tecnicas_de_aseguramiento.html">Tecnicas de Aseguramiento</a></li>
+                            <li><a href="../Html/aseguramiento_de_calidad.html">Herramientas de Calidad</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="fila-menu">
+                            <a href="../Html/herramientas_de_calidad.html">Procesos de Desarrollo del Software</a>
+                            <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+                        </div>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="../Html/SDLC.html">Ciclo de Vida del Software</a></li>
+                            <li><a href="">US-6 Modelos Tradicionales</a></li>
+                            <li><a href="#">US-7 Modelos Tradicionales</a></li>
+                            <li><a href="#">Metodologias </a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="fila-menu">
+                            <a href="../Html/herramientas_de_calidad.html">Metodologias en Detalles</a>
+                            <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+                        </div>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="../Html/scrum_profundo.html"> Sección Profunda de Scrum</a></li>
+                            <li><a href="../Html/kanban_profundo.html"> Sección Profunda de Kanban</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="fila-menu">
+                            <a href="../Html/herramientas_de_calidad.html">Recursos y Aprendizaje</a>
+                            <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+                        </div>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="#">US-12 Glosario</a></li>
+                            <li><a href="#">US-13 Preguntas Frecuentes</a></li>
+                            <li><a href="#">US-14 Enlaces de Interes</a></li>
+                            <li><a href="#">US-15 Ejercicios y Casos Prácticos</a></li>
+                        </ul>
+                    </li>
+
+                    <a href="../Html/nosotros.html">
+                      Sobre Nosotros
+                    </a>
+
+                    <a href="../Html/Formulario.html">
+                     Contacto
+                    </a>
+
+                    <li>
+                        <div class="fila-menu">
+                            <a href="../Html/herramientas_de_calidad.html">Herramientas interactivas</a>
+                            <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
+                        </div>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="../Html/cuadro_comparativo.html">Cuadro Comparativo</a></li>
+                            <li><a href="../Html/Encuesta.html">Encuesta</a></li>
+                        </ul>
+                    </li>
+
+                </div>
+
+            </nav>
+        </div>
+
+        <div class="portada">
+            <div class="portada-texto">
+                <p class="etiqueta">US-11 · PROFUNDA DE KANBAN</p>
+                <h1>Kanban: gestión de procesos</h1>
+                <p class="descripcion">Kanban es una herramienta visual que ayuda a 
+                    gestionar el flujo de trabajo, 
+                    mejorar la eficiencia y enfocarse en la entrega continua de valor.</p>
+            </div>
+
+            <div class="dibujo">
+                <div class="dibujo-tablero">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="dibujo-texto">
+                    Visualiza<br>
+                    Organiza<br>
+                    Mejora
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="contenedor principal">
+
+        <!-- Panel de la izquierda -->
+        <aside class="lateral">
+            <h2><i data-lucide="lightbulb"></i> ¿Qué es Kanban?</h2>
+            <p>Kanban es un método de gestión de procesos que se basa en la visualización del trabajo, la limitación del WIP (Work in Progress) y la mejora continua.</p>
+
+            <h3>Principios clave</h3>
+            <ul class="principios">
+                <li><i data-lucide="circle-check"></i> Visualizar el flujo de trabajo</li>
+                <li><i data-lucide="circle-check"></i> Limitar el trabajo en curso (WIP)</li>
+                <li><i data-lucide="circle-check"></i> Mejorar continuamente</li>
+            </ul>
+        </aside>
+
+        <!-- Tablero -->
+        <section class="tablero">
+
+            <div class="tablero-arriba">
+                <h2><i data-lucide="move"></i> Tablero Kanban <small>(¡Arrastrá las tarjetas!)</small></h2>
+
+                <div class="tablero-opciones">
+                    <select id="limite" onchange="cambiarLimite()">
+                        <option value="2">Límite de WIP: 2</option>
+                        <option value="3" selected>Límite de WIP: 3</option>
+                        <option value="4">Límite de WIP: 4</option>
+                        <option value="5">Límite de WIP: 5</option>
+                    </select>
+                    <span class="info"><i data-lucide="info"></i></span>
+                </div>
+            </div>
+
+            <p class="aviso-wip" id="aviso"></p>
+
+            <div class="columnas">
+
+                <!-- COLUMNA 1 -->
+                <div class="columna columna-azul" id="columna-porhacer">
+                    <div class="columna-titulo">
+                        <span class="numero">1</span>
+                        <b>Por Hacer</b> (<span id="num-porhacer">5</span>)
+                    </div>
+
+                    <div class="lista" id="col-porhacer" ondragover="permitirSoltar(event)" ondrop="soltar(event)">
+
+                        <div class="tarjeta-kanban" id="t1" draggable="true" ondragstart="empezarArrastre(event)" ondragend="terminarArrastre(event)">
+                            <div class="fila-tarjeta">
+                                <span>Diseñar la interfaz del login</span>
+                                <button class="mas" onclick="moverSiguiente(this)" title="Mover a la siguiente columna">&#8942;</button>
+                            </div>
+                            <span class="etiqueta-k tag-frontend">Frontend</span>
+                        </div>
+
+                        <div class="tarjeta-kanban" id="t2" draggable="true" ondragstart="empezarArrastre(event)" ondragend="terminarArrastre(event)">
+                            <div class="fila-tarjeta">
+                                <span>Configurar base de datos</span>
+                                <button class="mas" onclick="moverSiguiente(this)" title="Mover a la siguiente columna">&#8942;</button>
+                            </div>
+                            <span class="etiqueta-k tag-backend">Backend</span>
+                        </div>
+
+                        <div class="tarjeta-kanban" id="t3" draggable="true" ondragstart="empezarArrastre(event)" ondragend="terminarArrastre(event)">
+                            <div class="fila-tarjeta">
+                                <span>Escribir pruebas del sistema</span>
+                                <button class="mas" onclick="moverSiguiente(this)" title="Mover a la siguiente columna">&#8942;</button>
+                            </div>
+                            <span class="etiqueta-k tag-testing">Testing</span>
+                        </div>
+
+                        <div class="tarjeta-kanban" id="t4" draggable="true" ondragstart="empezarArrastre(event)" ondragend="terminarArrastre(event)">
+                            <div class="fila-tarjeta">
+                                <span>Crear documentación</span>
+                                <button class="mas" onclick="moverSiguiente(this)" title="Mover a la siguiente columna">&#8942;</button>
+                            </div>
+                            <span class="etiqueta-k tag-docs">Docs</span>
+                        </div>
+
+                        <div class="tarjeta-kanban" id="t5" draggable="true" ondragstart="empezarArrastre(event)" ondragend="terminarArrastre(event)">
+                            <div class="fila-tarjeta">
+                                <span>Definir criterios de aceptación</span>
+                                <button class="mas" onclick="moverSiguiente(this)" title="Mover a la siguiente columna">&#8942;</button>
+                            </div>
+                            <span class="etiqueta-k tag-docs">Docs</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- COLUMNA 2 -->
+                <div class="columna columna-naranja" id="columna-enproceso">
+                    <div class="columna-titulo">
+                        <span class="numero">2</span>
+                        <b>En Proceso</b> (<span id="num-enproceso">2</span>)
+                    </div>
+
+                    <div class="lista" id="col-enproceso" ondragover="permitirSoltar(event)" ondrop="soltar(event)">
+
+                        <div class="tarjeta-kanban" id="t6" draggable="true" ondragstart="empezarArrastre(event)" ondragend="terminarArrastre(event)">
+                            <div class="fila-tarjeta">
+                                <span>Desarrollar API de usuarios</span>
+                                <button class="mas" onclick="moverSiguiente(this)" title="Mover a la siguiente columna">&#8942;</button>
+                            </div>
+                            <span class="etiqueta-k tag-backend">Backend</span>
+                        </div>
+
+                        <div class="tarjeta-kanban" id="t7" draggable="true" ondragstart="empezarArrastre(event)" ondragend="terminarArrastre(event)">
+                            <div class="fila-tarjeta">
+                                <span>Diseñar base de datos</span>
+                                <button class="mas" onclick="moverSiguiente(this)" title="Mover a la siguiente columna">&#8942;</button>
+                            </div>
+                            <span class="etiqueta-k tag-backend">Backend</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- COLUMNA 3 -->
+                <div class="columna columna-verde" id="columna-hecho">
+                    <div class="columna-titulo">
+                        <span class="numero">3</span>
+                        <b>Hecho</b> (<span id="num-hecho">3</span>)
+                    </div>
+
+                    <div class="lista" id="col-hecho" ondragover="permitirSoltar(event)" ondrop="soltar(event)">
+
+                        <div class="tarjeta-kanban" id="t8" draggable="true" ondragstart="empezarArrastre(event)" ondragend="terminarArrastre(event)">
+                            <div class="fila-tarjeta">
+                                <span>Configurar entorno de desarrollo</span>
+                                <button class="mas" onclick="moverSiguiente(this)" title="Mover a la siguiente columna">&#8942;</button>
+                            </div>
+                            <span class="etiqueta-k tag-devops">DevOps</span>
+                        </div>
+
+                        <div class="tarjeta-kanban" id="t9" draggable="true" ondragstart="empezarArrastre(event)" ondragend="terminarArrastre(event)">
+                            <div class="fila-tarjeta">
+                                <span>Maquetar landing page</span>
+                                <button class="mas" onclick="moverSiguiente(this)" title="Mover a la siguiente columna">&#8942;</button>
+                            </div>
+                            <span class="etiqueta-k tag-frontend">Frontend</span>
+                        </div>
+
+                        <div class="tarjeta-kanban" id="t10" draggable="true" ondragstart="empezarArrastre(event)" ondragend="terminarArrastre(event)">
+                            <div class="fila-tarjeta">
+                                <span>Implementar autenticación</span>
+                                <button class="mas" onclick="moverSiguiente(this)" title="Mover a la siguiente columna">&#8942;</button>
+                            </div>
+                            <span class="etiqueta-k tag-backend">Backend</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/kanban_profundo.js"></script>
+</body>
+</html>

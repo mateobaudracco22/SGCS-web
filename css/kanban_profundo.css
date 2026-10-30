@@ -1,0 +1,522 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9f4fa;
+    color: #16324a;
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+    position: relative;
+    background: linear-gradient(135deg, #031b33, #06355a);
+    color: white;
+    padding: 16px 4% 30px 4%;
+}
+
+.barra-superior {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+
+    width: 100px;
+
+    display: flex;
+    align-items: center;
+
+}
+
+
+.logo img {
+
+    width: 75px;
+
+}
+
+.logo-texto {
+    background-color: #2ec4f0;
+    color: #031b33;
+    font-size: 8px;
+    font-weight: bold;
+    padding: 2px 4px;
+}
+
+.portada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.etiqueta {
+    font-size: 11px;
+    font-weight: bold;
+    color: #7fd3e8;
+    margin-bottom: 10px;
+}
+
+.portada h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    max-width: 520px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #c4dcea;
+}
+
+/* Dibujo de la derecha */
+.dibujo {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-right: 40px;
+}
+
+.dibujo-tablero {
+    display: flex;
+    gap: 6px;
+    width: 130px;
+    height: 70px;
+    padding: 8px;
+    border: 3px solid #2d86c0;
+    border-radius: 6px;
+}
+
+.dibujo-tablero div {
+    flex: 1;
+    border: 2px solid #2d86c0;
+    border-radius: 3px;
+}
+
+.dibujo-texto {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.35;
+    color: #4fd3f7;
+    transform: rotate(-5deg);
+}
+
+/* ---------- Menú hamburguesa ---------- */
+.menu {
+    margin-left: auto;
+    position: relative;
+}
+
+.menu-boton {
+    width: 42px;
+    height: 38px;
+    background-color: #007fb3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.menu-opciones {
+    position: absolute;
+    right: 42px;              /* pegado al botón, sin espacio en el medio */
+    top: 0;
+    width: 280px;
+    max-width: calc(100vw - 70px);
+    max-height: 80vh;         /* si el menú es muy largo, tiene scroll */
+    overflow-y: auto;
+    background-color: #031b33;
+    border: 1px solid #007fb3;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20px);
+    transition: 0.25s ease;
+    z-index: 1000;
+}
+
+.menu:hover .menu-opciones {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Se agrega con el clic del botón */
+.menu-opciones.abierto {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Quitar los puntitos de las listas */
+.menu-opciones li {
+    list-style: none;
+}
+
+/* ---------- Enlaces principales ---------- */
+.menu-opciones a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.3;
+    border-bottom: 1px solid #164363;
+    transition: 0.2s;
+}
+
+.menu-opciones a:hover {
+    background-color: #007fb3;
+    padding-left: 20px;
+}
+
+/* ---------- Fila con flecha ---------- */
+.fila-menu {
+    display: flex;
+    border-bottom: 1px solid #164363;
+}
+
+.menu-opciones .fila-menu a {
+    flex: 1;
+    border-bottom: none;
+}
+
+.flecha {
+    width: 46px;
+    background: none;
+    border: none;
+    border-left: 1px solid #164363;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.flecha:hover {
+    background-color: #007fb3;
+}
+
+.flecha.activa {
+    background-color: #0b3a5e;
+    color: #7fd3e8;
+}
+
+/* ---------- Submenús ---------- */
+.submenu {
+    display: none;
+    background-color: #052a4a;
+}
+
+.submenu.mostrar {
+    display: block;
+}
+
+.menu-opciones .submenu a {
+    padding-left: 28px;
+    font-size: 12px;
+    color: #b5e3f1;
+    border-bottom: 1px solid #0f3a5c;
+}
+
+.menu-opciones .submenu a:hover {
+    padding-left: 34px;
+    color: white;
+}
+
+/* Detalles del final del menú */
+.menu-opciones > li:last-child .fila-menu {
+    border-bottom: none;
+}
+
+.menu-opciones > li:last-child .submenu {
+    border-top: 1px solid #164363;
+}
+
+.menu-opciones > li:last-child .submenu li:last-child a {
+    border-bottom: none;
+}
+
+/* ---------- Contenido ---------- */
+.contenedor {
+    width: 94%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 24px 0 50px 0;
+}
+
+.principal {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* ---------- Panel de la izquierda ---------- */
+.lateral {
+    flex: 0 0 240px;
+    background-color: #d9edf7;
+    border: 1px solid #b9dcec;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.lateral h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.lateral h2 svg {
+    width: 20px;
+    height: 20px;
+    color: #0a8fc7;
+}
+
+.lateral p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #35566d;
+    margin-bottom: 20px;
+}
+
+.lateral h3 {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.principios {
+    list-style: none;
+}
+
+.principios li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.principios svg {
+    width: 18px;
+    height: 18px;
+    color: #0a8fc7;
+}
+
+/* ---------- Tablero ---------- */
+.tablero {
+    flex: 1;
+    background-color: #f4fbfe;
+    border: 1.5px solid #3dbdea;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.tablero-arriba {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.tablero-arriba h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+.tablero-arriba h2 svg {
+    width: 18px;
+    height: 18px;
+    color: #0a8fc7;
+}
+
+.tablero-arriba small {
+    font-size: 13px;
+    font-weight: normal;
+    color: #4b6378;
+}
+
+.tablero-opciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tablero-opciones select {
+    padding: 7px 10px;
+    border: 1px solid #b9dcec;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 11px;
+}
+
+.info svg {
+    width: 18px;
+    height: 18px;
+    color: #0a8fc7;
+}
+
+.aviso-wip {
+    display: none;
+    background-color: #fde2e2;
+    color: #b1332e;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 9px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+/* ---------- Columnas ---------- */
+.columnas {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.columna {
+    flex: 1;
+    border-radius: 10px;
+    padding: 12px;
+    border: 2px solid transparent;
+}
+
+.columna-azul { background-color: #dce9f9; }
+.columna-naranja { background-color: #fdf3dc; }
+.columna-verde { background-color: #def3e5; }
+
+.columna-titulo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.numero {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.columna-azul .numero { background-color: #2f7fd1; }
+.columna-azul .columna-titulo { color: #1d4f8a; }
+.columna-naranja .numero { background-color: #e08a1e; }
+.columna-naranja .columna-titulo { color: #a05f0a; }
+.columna-verde .numero { background-color: #1f9d5c; }
+.columna-verde .columna-titulo { color: #17703f; }
+
+/* Cuando se llega al límite de WIP */
+.columna.lleno {
+    border-color: #e5534b;
+}
+
+/* Zona donde se sueltan las tarjetas */
+.lista {
+    min-height: 120px;
+    max-height: 330px;
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.lista.sobre {
+    background-color: rgba(10, 155, 217, 0.15);
+}
+
+/* ---------- Tarjetas ---------- */
+.tarjeta-kanban {
+    background-color: white;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    cursor: grab;
+}
+
+.tarjeta-kanban.arrastrando {
+    opacity: 0.4;
+}
+
+.fila-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.mas {
+    background: none;
+    border: none;
+    color: #4b6378;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.mas:hover {
+    color: #0a77a8;
+}
+
+.etiqueta-k {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.tag-frontend { background-color: #d6e8fb; color: #1d5fa8; }
+.tag-backend { background-color: #d4ecf7; color: #0b6f93; }
+.tag-testing { background-color: #d9e4f7; color: #2d4f9a; }
+.tag-docs { background-color: #dde6f3; color: #44607f; }
+.tag-devops { background-color: #d3f0e0; color: #1f7a4a; }
+
+/* ---------- Pantallas chicas ---------- */
+@media (max-width: 900px) {
+    .principal {
+        flex-direction: column;
+    }
+    .lateral {
+        flex: none;
+        width: 100%;
+    }
+    .tablero {
+        width: 100%;
+    }
+    .dibujo {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .columnas {
+        flex-direction: column;
+    }
+    .columna {
+        width: 100%;
+    }
+    .portada h1 {
+        font-size: 28px;
+    }
+}
