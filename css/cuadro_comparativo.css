@@ -266,14 +266,12 @@ h2 {
 }
 
 .tarjetas {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
 .tarjeta {
-  flex: 1;
-  min-width: 180px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -387,5 +385,8 @@ th, td {
   }
   .portada h1 {
     font-size: 28px;
+  }
+    .tarjetas {
+    grid-template-columns: 1fr 1fr;
   }
 }
