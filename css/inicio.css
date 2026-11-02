@@ -790,7 +790,7 @@ footer h3 {
 }
 
 
-.redes a {
+.redes a, .redes .red-social-icon {
 
     width: 38px;
 

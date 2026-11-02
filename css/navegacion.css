@@ -1,0 +1,35 @@
+/* Reglas compartidas de navegación y accesibilidad. */
+nav.menu { position: relative; margin-left: auto; }
+nav.menu .menu-opciones { display: block; }
+nav.menu:hover .menu-opciones:not(.abierto),
+nav.menu:focus-within .menu-opciones:not(.abierto) {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(20px);
+  pointer-events: none;
+}
+nav.menu .menu-opciones.abierto {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+nav.menu .menu-etiqueta,
+nav.menu .menu-pendiente {
+  display: block;
+  padding: 12px 15px;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #e9f3fa;
+  border-bottom: 1px solid #164363;
+}
+nav.menu .menu-etiqueta { flex: 1; }
+nav.menu .menu-pendiente { color: #91a4b8; cursor: default; }
+nav.menu .menu-grupo { list-style: none; }
+nav.menu .menu-opciones .submenu .menu-pendiente { padding-left: 27px; font-size: 12px; }
+nav.menu .menu-boton:focus-visible,
+nav.menu .flecha:focus-visible,
+nav.menu a:focus-visible { outline: 2px solid #7ed6f5; outline-offset: 2px; }
+@media (max-width: 520px) {
+  nav.menu .menu-opciones { right: 0; top: calc(100% + 8px); width: min(300px, calc(100vw - 28px)); }
+}

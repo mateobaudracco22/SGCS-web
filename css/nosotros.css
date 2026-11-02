@@ -388,7 +388,7 @@ footer {
     gap: 15px;
 }
 
-.redes a {
+.redes a, .redes span {
     color: #00a8d6;
     text-decoration: none;
     font-size: 11px;

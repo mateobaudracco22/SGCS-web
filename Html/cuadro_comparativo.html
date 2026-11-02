@@ -6,6 +6,7 @@
   <title>UES - Comparador de metodologías</title>
   <link rel="stylesheet" href="../css/cuadro_comparativo.css">
    <link rel="icon" type="image/png" href="../imagenes/LOGOUES2.png">
+  <link rel="stylesheet" href="../css/navegacion.css">
 </head>
 <body>
 
@@ -20,91 +21,53 @@
             <p>Software • Procesos • Metodologías</p>
         </div>
 
-        <nav class="menu">
-
-            <button class="menu-boton">
-                ☰
-            </button>
-
-            <div class="menu-opciones">
-
-                <a href="../Html/Inicio.html">Inicio</a>
-
-                <li>
-                    <div class="fila-menu">
-                        <a href="../Html/herramientas_de_calidad.html">Gestion de Calidad</a>
-                        <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
-                    </div>
-                    <ul class="submenu" id="submenu">
-                        <li><a href="#">Us-2 Fundamentos</a></li>
-                        <li><a href="../Html/tecnicas_de_aseguramiento.html">Tecnicas de Aseguramiento</a></li>
-                        <li><a href="../Html/aseguramiento_de_calidad.html">Herramientas de Calidad</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <div class="fila-menu">
-                        <a href="../Html/herramientas_de_calidad.html">Procesos de Desarrollo del Software</a>
-                        <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
-                    </div>
-                    <ul class="submenu" id="submenu">
-                        <li><a href="../Html/SDLC.html">Ciclo de Vida del Software</a></li>
-                        <li><a href="">US-6 Modelos Tradicionales</a></li>
-                        <li><a href="#">US-7 Modelos Tradicionales</a></li>
-                        <li><a href="#">Metodologias </a></li>
-                    </ul>
-                </li>
-
-                
-
-                <li>
-                    <div class="fila-menu">
-                        <a href="../Html/herramientas_de_calidad.html">Metodologias en Detalles</a>
-                        <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
-                    </div>
-                    <ul class="submenu" id="submenu">
-                        <li><a href="../Html/Scrum_profundo.html">Sección Profunda de Scrum</a></li>
-                        <li><a href="../Html/kanban_profundo.html">Sección Profunda de Kanban</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <div class="fila-menu">
-                        <a href="../Html/herramientas_de_calidad.html">Recursos y Aprendizaje</a>
-                        <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
-                    </div>
-                    <ul class="submenu" id="submenu">
-                        <li><a href="#">US-12 Glosario</a></li>
-                        <li><a href="#">US-13 Preguntas Frecuentes</a></li>
-                        <li><a href="#">US-14 Enlaces de Interes</a></li>
-                        <li><a href="#">US-15 Ejercicios y Casos Prácticos</a></li>
-                    </ul>
-                </li>
-
-                <a href="../Html/nosotros.html">
-                  Sobre Nosotros
-                </a>
-
-                <a href="../Html/Formulario.html">
-                 Contacto
-                </a>
-                
-
-                <li>
-                    <div class="fila-menu">
-                        <a href="../Html/herramientas_de_calidad.html">Herramientas interactivas</a>
-                        <button class="flecha" onclick="abrirSubmenu()">&#9662;</button>
-                    </div>
-                    <ul class="submenu" id="submenu">
-                        <li><a href="../Html/cuadro_comparativo.html">Cuadro Comparativo</a></li>
-                        <li><a href="../Html/Encuesta.html">Encuesta</a></li>
-                    </ul>
-                </li>
-
-            </div>
-
-
-          </nav>
+        <nav class="menu" aria-label="Navegación principal">
+  <button type="button" class="menu-boton" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">☰</button>
+  <div class="menu-opciones" id="menu-principal">
+    <a href="Inicio.html">Inicio</a>
+    <div class="menu-grupo">
+      <div class="fila-menu"><a href="aseguramiento_de_calidad.html">Gestión de Calidad</a><button type="button" class="flecha" aria-label="Mostrar subsecciones de Gestión de Calidad" aria-expanded="false" aria-controls="submenu-gestion">▾</button></div>
+      <ul class="submenu" id="submenu-gestion">
+        <li><span class="menu-pendiente">US-02 Fundamentos (en desarrollo)</span></li>
+        <li><a href="aseguramiento_de_calidad.html">US-03 Técnicas de aseguramiento</a></li>
+        <li><a href="tecnicas_de_aseguramiento.html">US-04 Herramientas de calidad</a></li>
+      </ul>
+    </div>
+    <div class="menu-grupo">
+      <div class="fila-menu"><a href="SDLC.html">Procesos de desarrollo del software</a><button type="button" class="flecha" aria-label="Mostrar subsecciones de Procesos" aria-expanded="false" aria-controls="submenu-procesos">▾</button></div>
+      <ul class="submenu" id="submenu-procesos">
+        <li><a href="SDLC.html">Ciclo de vida del software (SDLC)</a></li>
+        <li><span class="menu-pendiente">US-06 Modelos tradicionales (en desarrollo)</span></li>
+        <li><span class="menu-pendiente">US-07 Modelos de desarrollo (en desarrollo)</span></li>
+      </ul>
+    </div>
+    <div class="menu-grupo">
+      <div class="fila-menu"><a href="Scrum_profundo.html">Metodologías en detalle</a><button type="button" class="flecha" aria-label="Mostrar metodologías" aria-expanded="false" aria-controls="submenu-metodologias">▾</button></div>
+      <ul class="submenu" id="submenu-metodologias">
+        <li><a href="Scrum_profundo.html">Scrum</a></li>
+        <li><a href="kanban_profundo.html">Kanban</a></li>
+      </ul>
+    </div>
+    <div class="menu-grupo">
+      <div class="fila-menu"><span class="menu-etiqueta">Recursos y aprendizaje</span><button type="button" class="flecha" aria-label="Mostrar recursos planificados" aria-expanded="false" aria-controls="submenu-recursos">▾</button></div>
+      <ul class="submenu" id="submenu-recursos">
+        <li><span class="menu-pendiente">US-12 Glosario (en desarrollo)</span></li>
+        <li><span class="menu-pendiente">US-13 Preguntas frecuentes (en desarrollo)</span></li>
+        <li><span class="menu-pendiente">US-14 Enlaces de interés (en desarrollo)</span></li>
+        <li><span class="menu-pendiente">US-15 Ejercicios (en desarrollo)</span></li>
+      </ul>
+    </div>
+    <a href="nosotros.html">Sobre nosotros</a>
+    <a href="Formulario.html">Contacto</a>
+    <div class="menu-grupo">
+      <div class="fila-menu"><a href="cuadro_comparativo.html">Herramientas interactivas</a><button type="button" class="flecha" aria-label="Mostrar herramientas interactivas" aria-expanded="false" aria-controls="submenu-interactivas">▾</button></div>
+      <ul class="submenu" id="submenu-interactivas">
+        <li><a href="cuadro_comparativo.html">US-18 Comparador de metodologías</a></li>
+        <li><a href="Encuesta.html">US-19 Encuesta metodológica</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     </header>
 
@@ -229,5 +192,6 @@
   </div>
 
   <script src="../js/metodologias.js"></script>
+  <script src="../js/navegacion.js"></script>
 </body>
 </html>
